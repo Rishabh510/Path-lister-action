@@ -9,9 +9,9 @@ author: "Rishabh Raizada"
 #     description: "Run the linter in strict mode (error on warnings)"
 #     required: false
 #     default: false
-# outputs:
-#   warnings:
-#     description: "Number of warnings raised if lint was successful"
+outputs:
+  paths:
+    description: "Paths of all files with given extension"
 runs:
   using: "docker"
   image: "Dockerfile"
