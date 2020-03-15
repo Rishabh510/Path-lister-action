@@ -50,8 +50,10 @@ jobs:
           done
 ```
 >Output generated for the above yaml file:
-![](https://github.com/Rishabh510/Path-lister-action/edit/master/example_output.PNG)
 
+![example_output](example_output.PNG)
+
+## License 
 [MIT license]
 
 [MIT license]: LICENSE
