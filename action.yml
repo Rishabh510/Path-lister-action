@@ -1,5 +1,5 @@
 name: "Path lister action"
-description: "Lists path of all the file of specified type in the specificied folder/directory"
+description: "Lists path of all the files of specified type in the specificied folder/directory"
 author: "Rishabh Raizada"
 inputs:
   path:
