@@ -16,8 +16,8 @@ def main():
     for root, dirs, files in os.walk(dir_path):
     	for file in files:
     		if file.endswith('.yml'):
-                _path = root+'\\'+str(file)+"\n"
-    			print(root+'\\'+str(file)+"\n")
+                _path = root+'\\'+str(file)+'\n';
+    			print(root+'\\'+str(file)+'\n')
                 set_action_output('paths', _path)
     			# f.write(root+'\\'+str(file)+"\n")
 
