@@ -3,7 +3,7 @@ import sys
 
 
 def set_action_output(name: str, value: str):
-    sys.stdout.write(f'::set-output name={name}::{escape(value)}\n')
+    sys.stdout.write(f'::set-output name={name}::{value}\n')
 
 
 def main():
@@ -13,13 +13,16 @@ def main():
     dir_path = os.path.dirname(os.path.realpath(__file__))
     # f=open("output.txt", "w")
 
+    path_count = 0
     for root, dirs, files in os.walk(dir_path):
     	for file in files:
     		if file.endswith('.yml'):
-                _path = root+'\\'+str(file)+'\n';
-    			print(root+'\\'+str(file)+'\n')
-                set_action_output('paths', _path)
+                path_count = path_count + 1
+                print(root+'\\'+str(file)+'\n')
     			# f.write(root+'\\'+str(file)+"\n")
+
+    print(f"::set-output name=paths::{path_count}")
+    set_action_output('paths', path_count)
 
     # f.close()
 
