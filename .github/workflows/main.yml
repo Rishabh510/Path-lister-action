@@ -12,27 +12,16 @@ jobs:
 
       - uses: actions/checkout@v1
 
-      # - name: Lint
-      #   run: |
-      #     pip install flake8
-      #     flake8 main.py
-
       - name: Fetch action
         id: pl
         uses: Rishabh510/Path-lister-action@master
         with:
           path: ".github/"
           type: ".yml"
+
       - name: Output results
         run: |
-          echo "Found ${{ steps.pl.outputs.path_count }} files with this extension:"
+          echo "Found ${{ steps.pl.outputs.path_count }} file(s) with this extension:"
           for i in ${{ steps.pl.outputs.paths }}; do
           echo $i
           done
-
-        # with:
-        #   path: "tests/invalid.yaml"
-      # - name: Output file
-        # run: |
-
-      #     python main.py
