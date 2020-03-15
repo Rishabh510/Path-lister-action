@@ -15,13 +15,13 @@ def main():
 
     path_count = 0
     path_list = []
-    paths = ''
+    paths = ""
     for root, dirs, files in os.walk(dir_path):
         for file in files:
             if file.endswith('.yml'):
                 # print(root + '/' + str(file) + '\n')
                 path_list.append('/' + str(file) + '\n')
-                paths = paths + root + '/' + str(file) + '\n '
+                paths = paths + root + "/" + str(file) + "\n"
                 path_count = path_count + 1
             # f.write(root+'\\'+str(file)+"\n")
 
