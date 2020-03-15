@@ -24,8 +24,9 @@ def main():
             # f.write(root+'\\'+str(file)+"\n")
 
     set_action_output('path_count', path_count)
-    for line in path_list:
-        set_action_output('paths', line)
+    # for line in path_list:
+        # set_action_output('paths', line)
+    set_action_output('paths', path_list)
 
     # f.close()
 
