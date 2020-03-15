@@ -20,8 +20,8 @@ def main():
         for file in files:
             if file.endswith('.yml'):
                 # print(root + '/' + str(file) + '\n')
-                path_list.append(root + '/' + str(file))
-                paths = paths + root + '/' + str(file)
+                path_list.append(root + '/' + str(file) + '\n')
+                paths = paths + root + '/' + str(file) + ' '
                 path_count = path_count + 1
             # f.write(root+'\\'+str(file)+"\n")
 
