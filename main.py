@@ -19,7 +19,7 @@ def main():
     		if file.endswith('.yml'):
                 path_count = path_count + 1
                 print(root+'\\'+str(file)+'\n')
-    			# f.write(root+'\\'+str(file)+"\n")
+                # f.write(root+'\\'+str(file)+"\n")
 
     print(f"::set-output name=paths::{path_count}")
     set_action_output('paths', path_count)
