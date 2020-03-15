@@ -22,6 +22,6 @@ jobs:
         uses: Rishabh510/Path-lister-action@master
         # with:
         #   path: "tests/invalid.yaml"
-      - name: Output file
-        run: |
-          python main.py
+      # - name: Output file
+      #   run: |
+      #     python main.py
