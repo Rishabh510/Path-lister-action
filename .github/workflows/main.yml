@@ -19,7 +19,7 @@ jobs:
 
       - name: Path list
         id: pl
-        uses: Rishabh510/Path-linter-action@master
+        uses: Rishabh510/Path-lister-action@master
         # with:
         #   path: "tests/invalid.yaml"
       - name: Output file
