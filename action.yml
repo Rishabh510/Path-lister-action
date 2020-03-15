@@ -10,8 +10,10 @@ author: "Rishabh Raizada"
 #     required: false
 #     default: false
 outputs:
+  path_count:
+    description: "Number of files found with the extension"
   paths:
-    description: "Paths of all files with given extension"
+    description: "Path of all the files with the extension"
 runs:
   using: "docker"
   image: "Dockerfile"

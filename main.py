@@ -14,16 +14,18 @@ def main():
     # f=open("output.txt", "w")
 
     path_count = 0
+    path_list = []
     for root, dirs, files in os.walk(dir_path):
         for file in files:
             if file.endswith('.yml'):
-                print(root + '\\' + str(file) + '\n')
+                # print(root + '\\' + str(file) + '\n')
+                path_list.append(root + '\\' + str(file))
                 path_count = path_count + 1
             # f.write(root+'\\'+str(file)+"\n")
 
-    print(f"::set-output name=paths::{path_count}")
-
-    set_action_output('paths', path_count)
+    set_action_output('path_count', path_count)
+    for line in path_list:
+        set_action_output('paths', line)
 
     # f.close()
 
