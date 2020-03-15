@@ -15,13 +15,14 @@ def main():
 
     path_count = 0
     for root, dirs, files in os.walk(dir_path):
-    	for file in files:
-    		if file.endswith('.yml'):
+        for file in files:
+            if file.endswith('.yml'):
+                print(root + '\\' + str(file) + '\n')
                 path_count = path_count + 1
-                print(root+'\\'+str(file)+'\n')
-                # f.write(root+'\\'+str(file)+"\n")
+            # f.write(root+'\\'+str(file)+"\n")
 
     print(f"::set-output name=paths::{path_count}")
+
     set_action_output('paths', path_count)
 
     # f.close()
