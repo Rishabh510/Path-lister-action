@@ -23,7 +23,7 @@ jobs:
       - name: Output
         run: |
           echo "There are ${{ steps.pl.outputs.path_count }} files."
-          echo "${{ steps.pl.outputs.paths }}."
+          echo -e "${{ steps.pl.outputs.paths }}"
 
         # with:
         #   path: "tests/invalid.yaml"
