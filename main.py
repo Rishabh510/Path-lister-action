@@ -7,20 +7,20 @@ def set_action_output(name: str, value: str):
 
 
 def main():
-    # yaml_path = os.environ["INPUT_PATH"]
-    # strict = os.environ["INPUT_STRICT"] == "true"
+    path = os.environ["INPUT_PATH"]
+    extension = os.environ["INPUT_TYPE"]
 
-    dir_path = os.path.dirname(os.path.realpath(__file__))
-    # f=open("output.txt", "w")
+    # dir_path = os.path.dirname(os.path.realpath(__file__))
+    # # f=open("output.txt", "w")
 
     path_count = 0
-    path_list = []
+    # path_list = []
     paths = ''
-    for root, dirs, files in os.walk(dir_path):
+    for root, dirs, files in os.walk(path):
         for file in files:
-            if file.endswith('.yml'):
+            if file.endswith(f'{extension}'):
                 # print(root + '/' + str(file) + '\n')
-                path_list.append(root + '/' + str(file) + '\n')
+                # path_list.append(root + '/' + str(file) + '\n')
                 paths = paths + root + '/' + str(file) + ' '
                 path_count = path_count + 1
             # f.write(root+'\\'+str(file)+"\n")

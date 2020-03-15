@@ -1,14 +1,14 @@
 name: "Path lister action"
 description: "List specific file paths in project"
 author: "Rishabh Raizada"
-# inputs:
-#   path:
-#     description: "Path to the YAML file to be linted"
-#     required: true
-#   strict:
-#     description: "Run the linter in strict mode (error on warnings)"
-#     required: false
-#     default: false
+inputs:
+  path:
+    description: "Path to find the files"
+    required: true
+  type:
+    description: "Type of files to find"
+    required: false
+    default: .yml
 outputs:
   path_count:
     description: "Number of files found with the extension"

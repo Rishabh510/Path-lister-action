@@ -17,12 +17,15 @@ jobs:
       #     pip install flake8
       #     flake8 main.py
 
-      - name: Path list
+      - name: Fetch action
         id: pl
         uses: Rishabh510/Path-lister-action@master
-      - name: Output
+        with:
+          path: "/"
+          type: ".yml"
+      - name: Output results
         run: |
-          echo "There are ${{ steps.pl.outputs.path_count }} files."
+          echo "Found ${{ steps.pl.outputs.path_count }} files with this extension:"
           for i in ${{ steps.pl.outputs.paths }}; do
           echo $i
           done
