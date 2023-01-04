@@ -4,7 +4,7 @@ import subprocess
 
 
 def set_action_output(name: str, value: str):
-    subprocess.call('echo "{name}={value}" >> $GITHUB_OUTPUT', shell=True)
+    subprocess.call('echo "name=value" >> $GITHUB_OUTPUT', shell=True)
 
 
 def main():
