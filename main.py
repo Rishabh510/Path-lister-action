@@ -1,9 +1,10 @@
 import os
 import sys
+import subprocess
 
 
 def set_action_output(name: str, value: str):
-    sys.stdout.write(f'::set-output name={name}::{value}\n')
+    subprocess.call('echo "name=${value}" >> $GITHUB_OUTPUT', shell=True)
 
 
 def main():
